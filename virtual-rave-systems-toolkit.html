@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#09070d">
+<title>VIRTUAL RAVE SYSTEMS TOOLKIT</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Silkscreen:wght@400;700&display=swap');
+:root{--bg:#09070d;--panel:#100d16;--panel2:#15101d;--line:#30233b;--text:#f0eaf5;--muted:#a39aaa;--red:#ff315a;--pink:#ff4fb8;--violet:#a65dff;--cyan:#5de8ff;--green:#b4ff54;--mono:'IBM Plex Mono',monospace;--pixel:'Silkscreen',monospace}
+*{box-sizing:border-box}html{background:var(--bg);color:var(--text);font-family:var(--mono);scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#27102c 0,transparent 36%),var(--bg);min-height:100vh}.shell{max-width:1240px;margin:auto;padding:0 26px}.topbar{height:68px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:14px}.mark{font:700 14px var(--pixel);color:var(--pink);letter-spacing:-1px}.sub,.status,.eyebrow,.counter,.hero-tags,.micro,footer,.viz-overlay{font-size:10px;letter-spacing:1.3px}.sub,.status,.micro,footer{color:var(--muted)}.status{display:flex;gap:10px;align-items:center}.pulse{width:7px;height:7px;background:var(--green);box-shadow:0 0 10px var(--green);border-radius:50%}.hero{padding:65px 0 42px;max-width:850px}.eyebrow{color:var(--pink);margin:0 0 14px}.hero h1{font:700 clamp(30px,6.5vw,72px)/1.12 var(--pixel);letter-spacing:-3px;margin:0 0 24px}.hero h1 span{color:transparent;-webkit-text-stroke:1px var(--pink)}.intro{max-width:690px;color:#c4bacd;line-height:1.8;font-size:14px}.hero-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}.hero-tags span{border:1px solid var(--line);padding:9px 11px;color:#c9bbd2;background:#0d0a12}.tabs{display:flex;gap:5px;border-bottom:1px solid var(--line);overflow-x:auto}.tab{white-space:nowrap;background:transparent;border:1px solid transparent;border-bottom:0;color:var(--muted);padding:15px 17px;font:500 11px var(--mono);cursor:pointer}.tab.active{color:var(--text);background:var(--panel);border-color:var(--line);box-shadow:inset 0 2px var(--pink)}main{padding:28px 0 70px}.panel{display:none}.panel.active{display:block}.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:22px}.section-head h2{font:700 clamp(20px,3vw,29px) var(--pixel);margin:0;letter-spacing:-1px}.section-head .eyebrow{margin-bottom:10px}.counter{color:var(--muted);border:1px solid var(--line);padding:9px 11px;white-space:nowrap}.columns{display:grid;grid-template-columns:minmax(260px,.8fr) minmax(0,1.2fr);gap:16px}.card{background:linear-gradient(145deg,#130f19,#0e0b13);border:1px solid var(--line);padding:22px;min-width:0}.card h3{font:600 12px var(--mono);letter-spacing:1px;text-transform:uppercase;margin:0 0 22px}.form-card label{display:block;color:#c9bdcf;font-size:10px;letter-spacing:.7px;margin-bottom:15px}.form-card input,.form-card textarea,.form-card select{display:block;width:100%;margin-top:8px;background:#09070d;color:var(--text);border:1px solid #3a2b46;padding:11px 12px;font:12px var(--mono);border-radius:0;outline:none}.form-card input:focus,.form-card textarea:focus,.form-card select:focus{border-color:var(--pink);box-shadow:0 0 0 1px var(--pink)}.form-card textarea{resize:vertical}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.primary,.secondary,.file-label{font:600 10px var(--mono);letter-spacing:1px;padding:12px 14px;cursor:pointer;border:1px solid var(--pink);background:var(--pink);color:#160914;display:inline-flex;align-items:center;justify-content:center}.primary{width:100%}.secondary,.file-label{background:#17101e;color:var(--text);border-color:#60406c}.primary:hover{background:#ff79ca}.secondary:hover,.file-label:hover{border-color:var(--pink)}.micro{font-size:9px;line-height:1.7;letter-spacing:.3px;margin:14px 0 0}.card-head{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding-bottom:15px;margin-bottom:8px}.card-head h3{margin:0}.text-button{border:0;background:none;color:var(--pink);font:10px var(--mono);cursor:pointer}.empty{padding:34px 8px;color:#e2d6e8;font-size:12px;line-height:2}.empty span{color:var(--muted);font-size:11px}.entry{border-bottom:1px solid #2a2032;padding:17px 0;display:flex;justify-content:space-between;gap:14px}.entry:last-child{border-bottom:0}.entry h4{font-size:12px;margin:0 0 7px;overflow-wrap:anywhere}.entry p{font-size:10px;color:var(--muted);line-height:1.7;margin:0;overflow-wrap:anywhere}.entry a{color:var(--cyan)}.delete{align-self:start;background:none;border:1px solid #523044;color:#ff7593;padding:6px 8px;font:9px var(--mono);cursor:pointer;flex-shrink:0}.viz-card{padding:14px}.viz-screen{height:360px;position:relative;background:#050409;border:1px solid #39203f;overflow:hidden}.viz-screen canvas{display:block;width:100%;height:100%}.viz-overlay{position:absolute;left:14px;right:14px;top:13px;display:flex;justify-content:space-between;gap:10px;color:#d9c4df;font-size:9px;pointer-events:none}.viz-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:16px 0 8px}.file-label input{display:none}.range-label{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:9px;letter-spacing:.7px}.range-label input{width:90px;accent-color:var(--pink)}.range-label select{background:#09070d;color:var(--text);border:1px solid var(--line);padding:9px;font:10px var(--mono)}audio{width:100%;height:35px;margin-top:8px}.readme{max-width:850px;line-height:1.8;color:#c7bdcf;font-size:12px}.readme h3{color:var(--text);margin-bottom:14px}.readme h4{color:var(--pink);font-size:10px;letter-spacing:1px;margin:28px 0 8px}.readme li{margin:7px 0}.readme code{color:var(--cyan)}.readme-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}footer{border-top:1px solid var(--line);padding:18px 0 26px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:9px}
+@media(max-width:760px){.shell{padding:0 14px}.topbar{height:58px}.sub{display:none}.hero{padding:46px 0 30px}.hero h1{letter-spacing:-2px}.hero-tags span{font-size:8px}.tab{padding:13px 12px;font-size:10px}.columns{grid-template-columns:1fr}.card{padding:17px}.section-head{align-items:start;flex-direction:column}.viz-screen{height:270px}.viz-overlay{font-size:8px;flex-direction:column}.two{gap:8px}.status{font-size:9px}}
+
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="topbar">
+    <div class="brand"><span class="mark">VR//SYS</span><span class="sub">OPEN TOOLKIT · 001</span></div>
+    <div class="status"><span class="pulse"></span> LOCAL SESSION <span id="clock">--:--:--</span></div>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow">COMMUNITY INFRASTRUCTURE / BROWSER BUILD</p>
+    <h1>VIRTUAL RAVE<br><span>SYSTEMS TOOLKIT</span></h1>
+    <p class="intro">A small, local-first toolkit for virtual club organizers, VJs, and music communities. No account. No server. Your edits stay in this browser until you export them.</p>
+    <div class="hero-tags"><span>01 / EVENT BOARD</span><span>02 / AUDIO VISUALIZER</span><span>03 / LINEUP ARCHIVE</span></div>
+  </section>
+
+  <nav class="tabs" aria-label="Toolkit sections">
+    <button class="tab active" data-panel="events">EVENT BOARD</button>
+    <button class="tab" data-panel="visualizer">VISUALIZER</button>
+    <button class="tab" data-panel="archive">LINEUP ARCHIVE</button>
+    <button class="tab" data-panel="about">README</button>
+  </nav>
+
+  <main>
+    <section class="panel active" id="events">
+      <div class="section-head"><div><p class="eyebrow">MODULE 01</p><h2>Event board</h2></div><span class="counter" id="eventCount">00 EVENTS</span></div>
+      <div class="columns">
+        <form id="eventForm" class="card form-card">
+          <h3>Register an event</h3>
+          <label>EVENT TITLE<input name="title" required maxlength="90" placeholder="e.g. AFTERIMAGE / virtual club night"></label>
+          <div class="two">
+            <label>DATE<input name="date" type="date" required></label>
+            <label>TIME / ZONE<input name="time" placeholder="22:00 UTC" required maxlength="40"></label>
+          </div>
+          <label>PLATFORM<input name="platform" placeholder="VRChat / browser / stream" maxlength="70"></label>
+          <label>EVENT LINK<input name="url" type="url" placeholder="https://…" maxlength="250"></label>
+          <label>NOTES<textarea name="notes" rows="3" maxlength="400" placeholder="Genre, access notes, community details…"></textarea></label>
+          <button class="primary" type="submit">+ ADD TO BOARD</button>
+          <p class="micro">Local draft only. Verify event details and permissions before publishing.</p>
+        </form>
+        <div class="card list-card">
+          <div class="card-head"><h3>Upcoming events</h3><button class="text-button" id="exportEvents">EXPORT JSON ↗</button></div>
+          <div id="eventList" class="empty">No events added yet.<br><span>Register a community event to start the board.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="visualizer">
+      <div class="section-head"><div><p class="eyebrow">MODULE 02</p><h2>Audio visualizer</h2></div><span class="counter">CLIENT-SIDE AUDIO</span></div>
+      <div class="card viz-card">
+        <div class="viz-screen">
+          <canvas id="viz" aria-label="Audio-reactive visualizer"></canvas>
+          <div class="viz-overlay"><span id="vizState">STANDBY / NO AUDIO</span><span>GENERATIVE FIELD // 60 FPS TARGET</span></div>
+        </div>
+        <div class="viz-controls">
+          <label class="file-label">LOAD AUDIO<input type="file" id="audioFile" accept="audio/*"></label>
+          <button class="secondary" id="playAudio" disabled>▶ PLAY</button>
+          <button class="secondary" id="pauseAudio" disabled>Ⅱ PAUSE</button>
+          <label class="range-label">INTENSITY <input id="intensity" type="range" min="1" max="10" value="5"></label>
+          <label class="range-label">COLOR FIELD <select id="palette"><option value="magenta">MAGENTA / VIOLET</option><option value="red">SIGNAL RED</option><option value="ice">ICE / CYAN</option><option value="acid">ACID GREEN</option></select></label>
+        </div>
+        <audio id="audio" controls></audio>
+        <p class="micro">Audio is processed locally in your browser. Use audio you have the right to play. Visuals are a standalone browser demo, not a synchronized VRChat world component.</p>
+      </div>
+    </section>
+
+    <section class="panel" id="archive">
+      <div class="section-head"><div><p class="eyebrow">MODULE 03</p><h2>Lineup archive</h2></div><span class="counter" id="trackCount">00 ENTRIES</span></div>
+      <div class="columns">
+        <form id="trackForm" class="card form-card">
+          <h3>Archive a track</h3>
+          <label>TRACK TITLE<input name="title" required maxlength="100" placeholder="Track or mix title"></label>
+          <label>ARTIST / ALIAS<input name="artist" required maxlength="80" placeholder="Artist alias"></label>
+          <div class="two">
+            <label>GENRE<input name="genre" maxlength="60" placeholder="Industrial / techno…"></label>
+            <label>YEAR<input name="year" type="number" min="1900" max="2100" placeholder="2026"></label>
+          </div>
+          <label>LISTEN LINK<input name="url" type="url" maxlength="250" placeholder="https://…"></label>
+          <label>EVENT / CONTEXT<input name="event" maxlength="100" placeholder="Where it was played / intended event"></label>
+          <button class="primary" type="submit">+ ARCHIVE ENTRY</button>
+          <p class="micro">Keep track credits accurate. Archive metadata and links; do not upload copyrighted audio without permission.</p>
+        </form>
+        <div class="card list-card">
+          <div class="card-head"><h3>Catalog</h3><button class="text-button" id="exportTracks">EXPORT JSON ↗</button></div>
+          <div id="trackList" class="empty">Archive is empty.<br><span>Add a track, mix, or event-associated release.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="about">
+      <div class="section-head"><div><p class="eyebrow">SYSTEM NOTES</p><h2>README</h2></div><span class="counter">V 1.0.0</span></div>
+      <div class="card readme">
+        <h3>Virtual Rave Systems Toolkit</h3>
+        <p>A lightweight starter kit for contributing code to virtual rave culture without needing to perform. Includes an event board, browser audio visualizer, and a small lineup archive.</p>
+        <h4>Run locally</h4>
+        <ol><li>Extract the ZIP file.</li><li>Open <code>index.html</code> in a modern browser.</li><li>Add events and track metadata. Data is saved in this browser's local storage.</li><li>Use the export buttons to download JSON snapshots.</li></ol>
+        <h4>Current capabilities</h4>
+        <ul><li>Responsive interface; keyboard-accessible forms and tabs.</li><li>Local event and track metadata storage.</li><li>JSON export for backup or future integration.</li><li>Audio file selection and canvas visualizer, processed client-side.</li></ul>
+        <h4>Limitations</h4>
+        <ul><li>This is a local prototype, not a hosted submission platform.</li><li>Local storage is tied to this browser and device; export backups.</li><li>Event links and submissions are not automatically published to communities.</li><li>No VRChat SDK integration or real-time multi-user synchronization is included.</li></ul>
+        <div class="readme-actions"><button class="secondary" id="exportAll">EXPORT ALL DATA</button><button class="secondary" id="resetData">CLEAR LOCAL DATA</button></div>
+        <p class="micro">Built as an open, editable prototype. Before deploying publicly, add moderation, privacy disclosures, event verification, and a hosted data layer.</p>
+      </div>
+    </section>
+  </main>
+  <footer><span>VR//SYS — COMMUNITY INFRASTRUCTURE</span><span>NO ACCOUNT · LOCAL-FIRST · EXPORTABLE</span></footer>
+</div>
+<script>
+(() => {
+  const $ = (s, root=document) => root.querySelector(s);
+  const $$ = (s, root=document) => [...root.querySelectorAll(s)];
+  const KEY = 'vrsys-toolkit-v1';
+  let state = { events: [], tracks: [] };
+  try { state = {...state, ...JSON.parse(localStorage.getItem(KEY) || '{}')}; } catch {}
+  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch {} };
+  const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const safeUrl = value => { try { const u = new URL(value); return ['http:','https:'].includes(u.protocol) ? u.href : ''; } catch { return ''; } };
+  const download = (name, data) => {
+    const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  };
+  const dateText = d => d ? esc(d) : 'DATE NOT SET';
+  function renderEvents() {
+    $('#eventCount').textContent = `${String(state.events.length).padStart(2,'0')} EVENTS`;
+    const root = $('#eventList');
+    if (!state.events.length) { root.className='empty'; root.innerHTML='No events added yet.<br><span>Register a community event to start the board.</span>'; return; }
+    root.className='';
+    root.innerHTML = state.events.slice().sort((a,b)=>(a.date||'').localeCompare(b.date||'')).map(e => {
+      const url = safeUrl(e.url);
+      return `<article class="entry"><div><h4>${esc(e.title)}</h4><p>${dateText(e.date)} · ${esc(e.time || 'TIME TBA')}<br>${esc(e.platform || 'PLATFORM TBA')}${e.notes ? '<br>'+esc(e.notes) : ''}${url ? `<br><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">OPEN EVENT ↗</a>` : ''}</p></div><button class="delete" data-delete-event="${esc(e.id)}">REMOVE</button></article>`;
+    }).join('');
+  }
+  function renderTracks() {
+    $('#trackCount').textContent = `${String(state.tracks.length).padStart(2,'0')} ENTRIES`;
+    const root = $('#trackList');
+    if (!state.tracks.length) { root.className='empty'; root.innerHTML='Archive is empty.<br><span>Add a track, mix, or event-associated release.</span>'; return; }
+    root.className='';
+    root.innerHTML = state.tracks.slice().reverse().map(t => {
+      const url = safeUrl(t.url);
+      return `<article class="entry"><div><h4>${esc(t.title)} <span style="color:var(--pink)">/ ${esc(t.artist)}</span></h4><p>${[t.genre,t.year,t.event].filter(Boolean).map(esc).join(' · ') || 'NO ADDITIONAL METADATA'}${url ? `<br><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">LISTEN ↗</a>` : ''}</p></div><button class="delete" data-delete-track="${esc(t.id)}">REMOVE</button></article>`;
+    }).join('');
+  }
+  $$('.tab').forEach(btn => btn.addEventListener('click', () => {
+    $$('.tab').forEach(b => b.classList.toggle('active', b===btn));
+    $$('.panel').forEach(p => p.classList.toggle('active', p.id===btn.dataset.panel));
+    if (btn.dataset.panel === 'visualizer') draw();
+  }));
+  $('#eventForm').addEventListener('submit', e => {
+    e.preventDefault(); const f = new FormData(e.currentTarget); const d = Object.fromEntries(f.entries());
+    if (d.url && !safeUrl(d.url)) { alert('Please enter a valid http or https event URL.'); return; }
+    state.events.push({...d, id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now())});
+    save(); renderEvents(); e.currentTarget.reset();
+  });
+  $('#trackForm').addEventListener('submit', e => {
+    e.preventDefault(); const f = new FormData(e.currentTarget); const d = Object.fromEntries(f.entries());
+    if (d.url && !safeUrl(d.url)) { alert('Please enter a valid http or https listening URL.'); return; }
+    state.tracks.push({...d, id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now())});
+    save(); renderTracks(); e.currentTarget.reset();
+  });
+  document.addEventListener('click', e => {
+    const ev = e.target.closest('[data-delete-event]'), tr = e.target.closest('[data-delete-track]');
+    if (ev && confirm('Remove this event from the local board?')) { state.events = state.events.filter(x => x.id !== ev.dataset.deleteEvent); save(); renderEvents(); }
+    if (tr && confirm('Remove this archive entry?')) { state.tracks = state.tracks.filter(x => x.id !== tr.dataset.deleteTrack); save(); renderTracks(); }
+  });
+  $('#exportEvents').addEventListener('click', () => download('virtual-rave-events.json', state.events));
+  $('#exportTracks').addEventListener('click', () => download('virtual-rave-lineup-archive.json', state.tracks));
+  $('#exportAll').addEventListener('click', () => download('virtual-rave-systems-data.json', state));
+  $('#resetData').addEventListener('click', () => { if(confirm('Clear all saved events and archive entries from this browser? This cannot be undone unless you exported a backup.')) { state={events:[],tracks:[]}; save(); renderEvents(); renderTracks(); } });
+
+  const canvas = $('#viz'), ctx = canvas.getContext('2d'), audio = $('#audio');
+  const file = $('#audioFile'), play = $('#playAudio'), pause = $('#pauseAudio');
+  let audioCtx, analyser, source, dataArray, raf=0, phase=0, loaded=false;
+  const palettes = {
+    magenta:['#ff315a','#ff4fb8','#a65dff','#5d2cff'],
+    red:['#ff173d','#ff4d4d','#a30028','#ff8a5b'],
+    ice:['#5de8ff','#729dff','#d4fbff','#3c55ff'],
+    acid:['#b4ff54','#57ffb0','#efff75','#29a87c']
+  };
+  function sizeCanvas() {
+    const rect=canvas.getBoundingClientRect(), dpr=Math.min(window.devicePixelRatio||1,2);
+    canvas.width=Math.max(1,Math.floor(rect.width*dpr)); canvas.height=Math.max(1,Math.floor(rect.height*dpr));
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  function draw() {
+    cancelAnimationFrame(raf);
+    const w=canvas.clientWidth||640,h=canvas.clientHeight||360;
+    if(!canvas.width || !canvas.height) sizeCanvas();
+    const intensity=Number($('#intensity').value), colors=palettes[$('#palette').value]||palettes.magenta;
+    ctx.fillStyle='rgba(5,4,9,0.22)';ctx.fillRect(0,0,w,h);
+    let average=0;
+    if(analyser && dataArray && !audio.paused) { analyser.getByteFrequencyData(dataArray); average=dataArray.reduce((a,b)=>a+b,0)/dataArray.length/255; }
+    phase += 0.006 + average*0.06;
+    const cx=w/2, cy=h/2, rings=8+intensity;
+    ctx.globalCompositeOperation='lighter';
+    for(let r=0;r<rings;r++){
+      const base=(Math.min(w,h)*0.06)+(r*5.8)+(average*intensity*18);
+      ctx.beginPath();
+      const points=160;
+      for(let i=0;i<=points;i++){
+        const a=i/points*Math.PI*2;
+        const band=dataArray ? dataArray[Math.min(dataArray.length-1,Math.floor(i/points*dataArray.length))]/255 : 0;
+        const wave=Math.sin(a*(3+(r%5))+phase*(r%2?1:-1))*((2+band*intensity*12));
+        const radius=base+wave;
+        const x=cx+Math.cos(a+phase*(r%3)*.12)*radius*1.45;
+        const y=cy+Math.sin(a+phase*(r%4)*.08)*radius*.8;
+        if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);
+      }
+      ctx.closePath();ctx.strokeStyle=colors[r%colors.length];ctx.globalAlpha=.18+(r/rings)*.55+average*.25;ctx.lineWidth=.6+(r%3)*.35;ctx.stroke();
+    }
+    ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';
+    if(!loaded) {
+      ctx.fillStyle='rgba(240,234,245,.45)';ctx.font='10px monospace';ctx.textAlign='center';
+      ctx.fillText('LOAD AUDIO TO DRIVE THE FIELD',cx,h-24);
+    }
+    raf=requestAnimationFrame(draw);
+  }
+  file.addEventListener('change', () => {
+    const f=file.files && file.files[0]; if(!f)return;
+    audio.src=URL.createObjectURL(f); audio.load(); loaded=true; play.disabled=false;pause.disabled=false;
+    $('#vizState').textContent='AUDIO LOADED / READY'; draw();
+  });
+  async function setupAudio() {
+    if(!audioCtx) {
+      audioCtx=new (window.AudioContext||window.webkitAudioContext)();
+      analyser=audioCtx.createAnalyser();analyser.fftSize=512;dataArray=new Uint8Array(analyser.frequencyBinCount);
+      source=audioCtx.createMediaElementSource(audio);source.connect(analyser);analyser.connect(audioCtx.destination);
+    }
+    if(audioCtx.state==='suspended')await audioCtx.resume();
+  }
+  play.addEventListener('click', async()=>{if(!audio.src)return;try{await setupAudio();await audio.play();$('#vizState').textContent='LIVE / AUDIO ANALYSIS';draw();}catch(err){$('#vizState').textContent='AUDIO PLAYBACK UNAVAILABLE';}});
+  pause.addEventListener('click',()=>audio.pause());
+  audio.addEventListener('pause',()=>{if(loaded)$('#vizState').textContent='PAUSED / FIELD IDLE';});
+  audio.addEventListener('ended',()=>$('#vizState').textContent='PLAYBACK COMPLETE');
+  $('#palette').addEventListener('change',draw);$('#intensity').addEventListener('input',draw);
+  window.addEventListener('resize',()=>{sizeCanvas();draw();});
+  function tick(){const d=new Date();$('#clock').textContent=[d.getHours(),d.getMinutes(),d.getSeconds()].map(n=>String(n).padStart(2,'0')).join(':');}
+  tick();setInterval(tick,1000);sizeCanvas();ctx.fillStyle='#050409';ctx.fillRect(0,0,canvas.width,canvas.height);renderEvents();renderTracks();
+})();
+</script>
+</body>
+</html>
