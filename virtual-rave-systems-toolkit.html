@@ -8,8 +8,22 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Silkscreen:wght@400;700&display=swap');
 :root{--bg:#09070d;--panel:#100d16;--panel2:#15101d;--line:#30233b;--text:#f0eaf5;--muted:#a39aaa;--red:#ff315a;--pink:#ff4fb8;--violet:#a65dff;--cyan:#5de8ff;--green:#b4ff54;--mono:'IBM Plex Mono',monospace;--pixel:'Silkscreen',monospace}
-*{box-sizing:border-box}html{background:var(--bg);color:var(--text);font-family:var(--mono);scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#27102c 0,transparent 36%),var(--bg);min-height:100vh}.shell{max-width:1240px;margin:auto;padding:0 26px}.topbar{height:68px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:14px}.mark{font:700 14px var(--pixel);color:var(--pink);letter-spacing:-1px}.sub,.status,.eyebrow,.counter,.hero-tags,.micro,footer,.viz-overlay{font-size:10px;letter-spacing:1.3px}.sub,.status,.micro,footer{color:var(--muted)}.status{display:flex;gap:10px;align-items:center}.pulse{width:7px;height:7px;background:var(--green);box-shadow:0 0 10px var(--green);border-radius:50%}.hero{padding:65px 0 42px;max-width:850px}.eyebrow{color:var(--pink);margin:0 0 14px}.hero h1{font:700 clamp(30px,6.5vw,72px)/1.12 var(--pixel);letter-spacing:-3px;margin:0 0 24px}.hero h1 span{color:transparent;-webkit-text-stroke:1px var(--pink)}.intro{max-width:690px;color:#c4bacd;line-height:1.8;font-size:14px}.hero-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}.hero-tags span{border:1px solid var(--line);padding:9px 11px;color:#c9bbd2;background:#0d0a12}.tabs{display:flex;gap:5px;border-bottom:1px solid var(--line);overflow-x:auto}.tab{white-space:nowrap;background:transparent;border:1px solid transparent;border-bottom:0;color:var(--muted);padding:15px 17px;font:500 11px var(--mono);cursor:pointer}.tab.active{color:var(--text);background:var(--panel);border-color:var(--line);box-shadow:inset 0 2px var(--pink)}main{padding:28px 0 70px}.panel{display:none}.panel.active{display:block}.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:22px}.section-head h2{font:700 clamp(20px,3vw,29px) var(--pixel);margin:0;letter-spacing:-1px}.section-head .eyebrow{margin-bottom:10px}.counter{color:var(--muted);border:1px solid var(--line);padding:9px 11px;white-space:nowrap}.columns{display:grid;grid-template-columns:minmax(260px,.8fr) minmax(0,1.2fr);gap:16px}.card{background:linear-gradient(145deg,#130f19,#0e0b13);border:1px solid var(--line);padding:22px;min-width:0}.card h3{font:600 12px var(--mono);letter-spacing:1px;text-transform:uppercase;margin:0 0 22px}.form-card label{display:block;color:#c9bdcf;font-size:10px;letter-spacing:.7px;margin-bottom:15px}.form-card input,.form-card textarea,.form-card select{display:block;width:100%;margin-top:8px;background:#09070d;color:var(--text);border:1px solid #3a2b46;padding:11px 12px;font:12px var(--mono);border-radius:0;outline:none}.form-card input:focus,.form-card textarea:focus,.form-card select:focus{border-color:var(--pink);box-shadow:0 0 0 1px var(--pink)}.form-card textarea{resize:vertical}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.primary,.secondary,.file-label{font:600 10px var(--mono);letter-spacing:1px;padding:12px 14px;cursor:pointer;border:1px solid var(--pink);background:var(--pink);color:#160914;display:inline-flex;align-items:center;justify-content:center}.primary{width:100%}.secondary,.file-label{background:#17101e;color:var(--text);border-color:#60406c}.primary:hover{background:#ff79ca}.secondary:hover,.file-label:hover{border-color:var(--pink)}.micro{font-size:9px;line-height:1.7;letter-spacing:.3px;margin:14px 0 0}.card-head{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding-bottom:15px;margin-bottom:8px}.card-head h3{margin:0}.text-button{border:0;background:none;color:var(--pink);font:10px var(--mono);cursor:pointer}.empty{padding:34px 8px;color:#e2d6e8;font-size:12px;line-height:2}.empty span{color:var(--muted);font-size:11px}.entry{border-bottom:1px solid #2a2032;padding:17px 0;display:flex;justify-content:space-between;gap:14px}.entry:last-child{border-bottom:0}.entry h4{font-size:12px;margin:0 0 7px;overflow-wrap:anywhere}.entry p{font-size:10px;color:var(--muted);line-height:1.7;margin:0;overflow-wrap:anywhere}.entry a{color:var(--cyan)}.delete{align-self:start;background:none;border:1px solid #523044;color:#ff7593;padding:6px 8px;font:9px var(--mono);cursor:pointer;flex-shrink:0}.viz-card{padding:14px}.viz-screen{height:360px;position:relative;background:#050409;border:1px solid #39203f;overflow:hidden}.viz-screen canvas{display:block;width:100%;height:100%}.viz-overlay{position:absolute;left:14px;right:14px;top:13px;display:flex;justify-content:space-between;gap:10px;color:#d9c4df;font-size:9px;pointer-events:none}.viz-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:16px 0 8px}.file-label input{display:none}.range-label{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:9px;letter-spacing:.7px}.range-label input{width:90px;accent-color:var(--pink)}.range-label select{background:#09070d;color:var(--text);border:1px solid var(--line);padding:9px;font:10px var(--mono)}audio{width:100%;height:35px;margin-top:8px}.readme{max-width:850px;line-height:1.8;color:#c7bdcf;font-size:12px}.readme h3{color:var(--text);margin-bottom:14px}.readme h4{color:var(--pink);font-size:10px;letter-spacing:1px;margin:28px 0 8px}.readme li{margin:7px 0}.readme code{color:var(--cyan)}.readme-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}footer{border-top:1px solid var(--line);padding:18px 0 26px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:9px}
-@media(max-width:760px){.shell{padding:0 14px}.topbar{height:58px}.sub{display:none}.hero{padding:46px 0 30px}.hero h1{letter-spacing:-2px}.hero-tags span{font-size:8px}.tab{padding:13px 12px;font-size:10px}.columns{grid-template-columns:1fr}.card{padding:17px}.section-head{align-items:start;flex-direction:column}.viz-screen{height:270px}.viz-overlay{font-size:8px;flex-direction:column}.two{gap:8px}.status{font-size:9px}}
+*{box-sizing:border-box}html{background:var(--bg);color:var(--text);font-family:var(--mono);scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#27102c 0,transparent 36%),var(--bg);min-height:100vh}.shell{max-width:1240px;margin:auto;padding:0 26px}.topbar{height:68px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:14px}.mark{font:700 14px var(--pixel);color:var(--pink);letter-spacing:-1px}.sub,.status,.eyebrow,.counter,.hero-tags,.micro,footer{font-size:10px;letter-spacing:1.3px}.sub,.status,.micro,footer{color:var(--muted)}.status{display:flex;gap:10px;align-items:center}.pulse{width:7px;height:7px;background:var(--green);box-shadow:0 0 10px var(--green);border-radius:50%}.hero{padding:65px 0 42px;max-width:850px}.eyebrow{color:var(--pink);margin:0 0 14px}.hero h1{font:700 clamp(30px,6.5vw,72px)/1.12 var(--pixel);letter-spacing:-3px;margin:0 0 24px}.hero h1 span{color:transparent;-webkit-text-stroke:1px var(--pink)}.intro{max-width:690px;color:#c4bacd;line-height:1.8;font-size:14px}.hero-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}.hero-tags span{border:1px solid var(--line);padding:9px 11px;color:#c9bbd2;background:#0d0a12}.tabs{display:flex;gap:5px;border-bottom:1px solid var(--line);overflow-x:auto}.tab{white-space:nowrap;background:transparent;border:1px solid transparent;border-bottom:0;color:var(--muted);padding:15px 17px;font:500 11px var(--mono);cursor:pointer}.tab.active{color:var(--text);background:var(--panel);border-color:var(--line);box-shadow:inset 0 2px var(--pink)}main{padding:28px 0 70px}.panel{display:none}.panel.active{display:block}.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:22px}.section-head h2{font:700 clamp(20px,3vw,29px) var(--pixel);margin:0;letter-spacing:-1px}.section-head .eyebrow{margin-bottom:10px}.counter{color:var(--muted);border:1px solid var(--line);padding:9px 11px;white-space:nowrap}.columns{display:grid;grid-template-columns:minmax(260px,.8fr) minmax(0,1.2fr);gap:16px}.card{background:linear-gradient(145deg,#130f19,#0e0b13);border:1px solid var(--line);padding:22px;min-width:0}.card h3{font:600 12px var(--mono);letter-spacing:1px;text-transform:uppercase;margin:0 0 22px}.form-card label{display:block;color:#c9bdcf;font-size:10px;letter-spacing:.7px;margin-bottom:15px}.form-card input,.form-card textarea,.form-card select{display:block;width:100%;margin-top:8px;background:#09070d;color:var(--text);border:1px solid #3a2b46;padding:11px 12px;font:12px var(--mono);border-radius:0;outline:none}.form-card input:focus,.form-card textarea:focus,.form-card select:focus{border-color:var(--pink);box-shadow:0 0 0 1px var(--pink)}.form-card textarea{resize:vertical}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.primary,.secondary,.file-label{font:600 10px var(--mono);letter-spacing:1px;padding:12px 14px;cursor:pointer;border:1px solid var(--pink);background:var(--pink);color:#160914;display:inline-flex;align-items:center;justify-content:center}.primary{width:100%}.secondary,.file-label{background:#17101e;color:var(--text);border-color:#60406c}.primary:hover{background:#ff79ca}.secondary:hover,.file-label:hover{border-color:var(--pink)}.micro{font-size:9px;line-height:1.7;letter-spacing:.3px;margin:14px 0 0}.card-head{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding-bottom:15px;margin-bottom:8px}.card-head h3{margin:0}.text-button{border:0;background:none;color:var(--pink);font:10px var(--mono);cursor:pointer}.empty{padding:34px 8px;color:#e2d6e8;font-size:12px;line-height:2}.empty span{color:var(--muted);font-size:11px}.entry{border-bottom:1px solid #2a2032;padding:17px 0;display:flex;justify-content:space-between;gap:14px}.entry:last-child{border-bottom:0}.entry h4{font-size:12px;margin:0 0 7px;overflow-wrap:anywhere}.entry p{font-size:10px;color:var(--muted);line-height:1.7;margin:0;overflow-wrap:anywhere}.entry a{color:var(--cyan)}.delete{align-self:start;background:none;border:1px solid #523044;color:#ff7593;padding:6px 8px;font:9px var(--mono);cursor:pointer;flex-shrink:0}.cue-timeline{display:grid;gap:0}.cue-row{display:grid;grid-template-columns:90px minmax(0,1fr) auto;gap:14px;align-items:start;padding:16px 0;border-bottom:1px solid #2a2032}.cue-row:last-child{border-bottom:0}.cue-time{color:var(--cyan);font-size:11px;padding-top:2px}.cue-row h4{margin:0 0 6px;font-size:12px;overflow-wrap:anywhere}.cue-row p{margin:0;color:var(--muted);font-size:10px;line-height:1.7;overflow-wrap:anywhere}.cue-kind{display:inline-block;border:1px solid #60406c;color:var(--pink);padding:4px 6px;font-size:8px;letter-spacing:.8px;margin-bottom:7px}.cue-actions{display:flex;gap:6px;align-items:center}.cue-tools{display:flex;gap:8px;flex-wrap:wrap}.cue-tools .secondary{width:auto}.cue-count{color:var(--muted);font-size:9px;letter-spacing:1px}.form-card select option{background:#09070d}.cue-row .delete{margin-top:2px}.readme{max-width:850px;line-height:1.8;color:#c7bdcf;font-size:12px}.readme h3{color:var(--text);margin-bottom:14px}.readme h4{color:var(--pink);font-size:10px;letter-spacing:1px;margin:28px 0 8px}.readme li{margin:7px 0}.readme code{color:var(--cyan)}.readme-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}footer{border-top:1px solid var(--line);padding:18px 0 26px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:9px}
+@media(max-width:760px){.shell{padding:0 14px}.topbar{height:58px}.sub{display:none}.hero{padding:46px 0 30px}.hero h1{letter-spacing:-2px}.hero-tags span{font-size:8px}.tab{padding:13px 12px;font-size:10px}.columns{grid-template-columns:1fr}.card{padding:17px}.section-head{align-items:start;flex-direction:column}.cue-row{grid-template-columns:65px minmax(0,1fr);gap:10px}.cue-actions{grid-column:2}.cue-row .delete{margin:0}.two{gap:8px}.status{font-size:9px}}
+
+
+/* FUTURE SIGNAL REDESIGN — visual layer only; all original tools and handlers remain intact */
+:root{--bg:#05050a;--panel:#0b0b14;--panel2:#11111e;--line:#282842;--text:#f8f7ff;--muted:#9999b6;--red:#ff315a;--pink:#ff38d1;--violet:#8b5cff;--cyan:#48f5ff;--green:#c8ff54;--mono:'IBM Plex Mono',monospace;--pixel:'Silkscreen',monospace}
+html{background:var(--bg)}body{background:radial-gradient(ellipse at 80% 8%,rgba(133,35,255,.22),transparent 32%),radial-gradient(ellipse at 8% 36%,rgba(255,38,190,.10),transparent 30%),#05050a;letter-spacing:-.15px}.shell{max-width:1500px;padding:0 clamp(16px,4vw,64px)}.topbar{height:76px;border-bottom:1px solid #34304d}.mark{font:700 14px var(--pixel);color:var(--cyan);text-shadow:0 0 14px #48f5ff66}.sub,.status,.eyebrow,.counter,.hero-tags,.micro,footer{letter-spacing:1.5px}.pulse{background:var(--cyan);box-shadow:0 0 14px var(--cyan)}
+.hero{max-width:1200px;padding:clamp(54px,9vw,130px) 0 clamp(36px,5vw,68px)}.hero .eyebrow{font-size:10px;color:var(--cyan);text-transform:uppercase}.hero h1{font-family:Arial,Helvetica,sans-serif;font-size:clamp(48px,10.6vw,156px);font-weight:900;line-height:.83;letter-spacing:-.085em;margin:0 0 34px;text-transform:uppercase;text-wrap:balance}.hero h1 span{display:inline-block;color:var(--pink);-webkit-text-stroke:0;text-shadow:0 0 12px #ff38d144,0 0 42px #ff38d122}.intro{font-size:clamp(13px,1.2vw,16px);max-width:620px;color:#c4c4dc;line-height:1.85;border-left:3px solid var(--cyan);padding-left:18px}.hero-tags{gap:8px;margin-top:34px}.hero-tags span{background:#0b0b15;border:1px solid #393354;color:#c8c4e4;padding:11px 13px;font-size:9px}.hero-tags span:first-child{border-color:#ff38d1;color:#ff8ce8;box-shadow:inset 0 0 18px #ff38d10b}
+.tabs{gap:0;border-bottom:1px solid #383451}.tab{padding:18px clamp(12px,2vw,26px);font-size:10px;font-weight:700;letter-spacing:1px;color:#9292b1;border:0;border-top:2px solid transparent;background:transparent}.tab.active{background:#10101d;color:#fff;border:0;border-top:2px solid var(--pink);box-shadow:inset 0 0 24px #ff38d10c}.tab:hover{color:var(--cyan)}main{padding:34px 0 90px}.section-head{margin-bottom:24px}.eyebrow{color:var(--cyan)}.section-head h2{font-family:Arial,Helvetica,sans-serif;font-size:clamp(34px,5vw,64px);line-height:.95;letter-spacing:-.06em;text-transform:uppercase;font-weight:900;margin:0}.counter{border:1px solid #48406b;color:var(--pink);background:#100b1b;padding:9px 12px}.columns{gap:16px;grid-template-columns:minmax(280px,.78fr) minmax(0,1.22fr)}.card{background:linear-gradient(145deg,#10101c,#090911 80%);border:1px solid #2c2a47;border-radius:2px;padding:clamp(17px,2vw,28px);box-shadow:0 12px 45px #0003}.card h3{font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:#fff}.card-head{border-bottom:1px solid #292741;padding-bottom:15px;margin-bottom:15px}.primary{background:var(--pink);color:#08040b;border:1px solid var(--pink);font-weight:800;letter-spacing:1px;box-shadow:0 0 22px #ff38d122}.primary:hover{background:#ff8de8}.secondary,.text-button{border:1px solid #484064;background:#121020;color:var(--cyan);letter-spacing:.8px}.secondary:hover,.text-button:hover{border-color:var(--cyan);background:#15152a}.form-card label{color:#aaa9c7;letter-spacing:.8px;font-size:9px}.form-card input,.form-card textarea,.form-card select{background:#070710;border:1px solid #33304f;border-radius:1px;color:#f8f7ff;padding:12px;font:12px var(--mono)}.form-card input:focus,.form-card textarea:focus,.form-card select:focus{outline:1px solid var(--cyan);border-color:var(--cyan);box-shadow:0 0 0 3px #48f5ff0d}.event-item,.track-item,.cue-row{border-color:#282641}.event-item h4,.track-item h4,.cue-row h4{font-size:14px;color:#fff}.event-date,.track-meta,.cue-time{color:var(--cyan)}.event-item,.track-item{background:#0b0b15;padding:15px;border:1px solid #26243e;margin-bottom:10px}.delete{border-color:#57304e;color:#ff7adf}.delete:hover{background:#321126}.empty{border:1px dashed #34304f;background:#0a0a13;color:#9998b6;padding:25px;line-height:1.9}.empty span{color:#777792}.readme{max-width:1000px}.readme h3{font:900 clamp(26px,4vw,46px)/1 Arial,sans-serif;letter-spacing:-.05em;text-transform:uppercase}.readme h4{color:var(--cyan)}footer{border-color:#292641;color:#8887a6;padding:24px 0 32px}
+@media(max-width:760px){.shell{padding:0 14px}.hero{padding:54px 0 32px}.hero h1{font-size:clamp(43px,13vw,86px);letter-spacing:-.075em;line-height:.9}.intro{font-size:13px}.hero-tags{display:grid;grid-template-columns:1fr}.hero-tags span{font-size:8px}.columns{grid-template-columns:1fr}.section-head h2{font-size:42px}.tab{font-size:9px;padding:14px 11px}.card{padding:16px}.status{font-size:8px}}
+@media(prefers-reduced-motion:no-preference){.primary,.tab,.secondary,.text-button{transition:background .18s ease,border-color .18s ease,box-shadow .18s ease}.hero h1 span{animation:signalGlow 5s ease-in-out infinite alternate}@keyframes signalGlow{from{text-shadow:0 0 10px #ff38d133}to{text-shadow:0 0 18px #ff38d166,0 0 48px #8b5cff33}}}
+
+
+/* AUDIO TESTERS */
+.audio-grid{display:grid;grid-template-columns:minmax(260px,.72fr) minmax(0,1.28fr);gap:16px}.audio-drop{min-height:170px;border:1px dashed #6b4a85;background:linear-gradient(135deg,#171027,#090911);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;cursor:pointer;color:var(--cyan);font-size:11px;letter-spacing:1px;padding:20px}.audio-drop:hover{border-color:var(--pink);box-shadow:inset 0 0 28px #ff38d111}.audio-drop span:last-of-type{font-size:9px;color:var(--muted);letter-spacing:.4px}.drop-mark{font-size:34px;color:var(--pink);line-height:1;text-shadow:0 0 20px #ff38d155}.audio-drop input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}.audio-file-meta{font-size:9px;letter-spacing:.6px;color:var(--cyan);overflow-wrap:anywhere;margin:18px 0 12px;line-height:1.8}.audio-player,audio{width:100%}audio{height:38px;margin-bottom:16px;filter:saturate(.8)}.audio-reset{width:100%;margin-top:9px}.wave-wrap{border:1px solid #302b4a;background:#070710;padding:12px;margin-bottom:14px}.wave-wrap canvas{width:100%;height:150px;display:block}.wave-labels{display:flex;justify-content:space-between;gap:10px;font-size:9px;color:var(--muted);letter-spacing:.8px;margin-top:8px}.metric-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.metric{border:1px solid #2c2945;background:#0b0b14;padding:13px;min-width:0}.metric span{display:block;color:var(--muted);font-size:8px;letter-spacing:.8px;line-height:1.5}.metric strong{display:block;color:var(--cyan);font-size:clamp(17px,2vw,25px);margin:10px 0 5px;overflow-wrap:anywhere}.metric small{color:#777794;font-size:9px}.audio-findings{margin-top:12px;padding:14px;border-left:2px solid var(--pink);background:#110d19;color:#c8c6dc;font-size:10px;line-height:1.9;white-space:pre-line}.audio-findings .good{color:var(--green)}.audio-findings .warn{color:#ff8de8}.data-utilities{margin-top:16px;display:flex;align-items:center;justify-content:space-between;gap:20px}.data-utilities h3{margin:0}.data-utilities .micro{max-width:600px}.data-utilities .readme-actions{margin:0}.data-utilities .secondary{width:auto}
+@media(max-width:850px){.audio-grid{grid-template-columns:1fr}.metric-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.data-utilities{align-items:flex-start;flex-direction:column}.audio-drop{min-height:135px}}
 
 </style>
 </head>
@@ -21,17 +35,17 @@
   </header>
 
   <section class="hero">
-    <p class="eyebrow">COMMUNITY INFRASTRUCTURE / BROWSER BUILD</p>
+    <p class="eyebrow">COMMUNITY INFRASTRUCTURE / LIVE SYSTEMS INTERFACE</p>
     <h1>VIRTUAL RAVE<br><span>SYSTEMS TOOLKIT</span></h1>
-    <p class="intro">A small, local-first toolkit for virtual club organizers, VJs, and music communities. No account. No server. Your edits stay in this browser until you export them.</p>
-    <div class="hero-tags"><span>01 / EVENT BOARD</span><span>02 / AUDIO VISUALIZER</span><span>03 / LINEUP ARCHIVE</span></div>
+    <p class="intro">TOOLS FOR THE UNDERGROUND INTERNET. Organize virtual rave events, map show cues, and archive music metadata. No account. No server. Your edits stay in this browser until you export them.</p>
+    <div class="hero-tags"><span>01 / EVENT BOARD</span><span>02 / SHOW CUE PLANNER</span><span>03 / LINEUP ARCHIVE</span></div>
   </section>
 
   <nav class="tabs" aria-label="Toolkit sections">
     <button class="tab active" data-panel="events">EVENT BOARD</button>
-    <button class="tab" data-panel="visualizer">VISUALIZER</button>
+    <button class="tab" data-panel="cues">SHOW CUE PLANNER</button>
     <button class="tab" data-panel="archive">LINEUP ARCHIVE</button>
-    <button class="tab" data-panel="about">README</button>
+    <button class="tab" data-panel="audio">AUDIO TESTERS</button>
   </nav>
 
   <main>
@@ -58,22 +72,25 @@
       </div>
     </section>
 
-    <section class="panel" id="visualizer">
-      <div class="section-head"><div><p class="eyebrow">MODULE 02</p><h2>Audio visualizer</h2></div><span class="counter">CLIENT-SIDE AUDIO</span></div>
-      <div class="card viz-card">
-        <div class="viz-screen">
-          <canvas id="viz" aria-label="Audio-reactive visualizer"></canvas>
-          <div class="viz-overlay"><span id="vizState">STANDBY / NO AUDIO</span><span>GENERATIVE FIELD // 60 FPS TARGET</span></div>
+    <section class="panel" id="cues">
+      <div class="section-head"><div><p class="eyebrow">MODULE 02</p><h2>Show cue planner</h2></div><span class="counter" id="cueCount">00 CUES</span></div>
+      <div class="columns">
+        <form id="cueForm" class="card form-card">
+          <h3>Schedule a cue</h3>
+          <label>TIME / SET POSITION<input name="time" required maxlength="30" placeholder="00:18:30 or 18 min"></label>
+          <label>CUE NAME<input name="title" required maxlength="90" placeholder="e.g. blackout into red grid"></label>
+          <div class="two">
+            <label>CUE TYPE<select name="kind"><option>LIGHTING</option><option>VISUALS</option><option>AUDIO</option><option>SCENE CHANGE</option><option>HOST / MC</option><option>TECH CHECK</option><option>OTHER</option></select></label>
+            <label>OPERATOR<input name="operator" maxlength="60" placeholder="VJ / host / tech"></label>
+          </div>
+          <label>EXECUTION NOTES<textarea name="notes" rows="4" maxlength="500" placeholder="What changes, who triggers it, fallback plan…"></textarea></label>
+          <button class="primary" type="submit">+ ADD SHOW CUE</button>
+          <p class="micro">Build a run-of-show for a livestream, browser party, virtual venue, or remote VJ set. Times are planning labels, not a synchronized clock.</p>
+        </form>
+        <div class="card list-card">
+          <div class="card-head"><h3>Run of show</h3><div class="cue-tools"><button class="text-button" id="exportCues">EXPORT JSON ↗</button><button class="text-button" id="sortCues">SORT BY TIME ↕</button></div></div>
+          <div id="cueList" class="empty">No cues scheduled yet.<br><span>Add transitions, lighting changes, host prompts, or technical checks.</span></div>
         </div>
-        <div class="viz-controls">
-          <label class="file-label">LOAD AUDIO<input type="file" id="audioFile" accept="audio/*"></label>
-          <button class="secondary" id="playAudio" disabled>▶ PLAY</button>
-          <button class="secondary" id="pauseAudio" disabled>Ⅱ PAUSE</button>
-          <label class="range-label">INTENSITY <input id="intensity" type="range" min="1" max="10" value="5"></label>
-          <label class="range-label">COLOR FIELD <select id="palette"><option value="magenta">MAGENTA / VIOLET</option><option value="red">SIGNAL RED</option><option value="ice">ICE / CYAN</option><option value="acid">ACID GREEN</option></select></label>
-        </div>
-        <audio id="audio" controls></audio>
-        <p class="micro">Audio is processed locally in your browser. Use audio you have the right to play. Visuals are a standalone browser demo, not a synchronized VRChat world component.</p>
       </div>
     </section>
 
@@ -99,6 +116,30 @@
         </div>
       </div>
     </section>
+
+    <section class="panel" id="audio">
+      <div class="section-head"><div><p class="eyebrow">MODULE 04 / SIGNAL DIAGNOSTICS</p><h2>Audio testers</h2></div><span class="counter" id="audioStatus">NO FILE LOADED</span></div>
+      <div class="audio-grid">
+        <div class="card audio-load">
+          <h3>01 / Load a local audio file</h3>
+          <label class="audio-drop" for="audioFile"><span class="drop-mark">＋</span><strong>SELECT AUDIO FILE</strong><span>WAV · MP3 · OGG · FLAC* · M4A*</span><input id="audioFile" type="file" accept="audio/*,.wav,.mp3,.ogg,.flac,.m4a,.aac"></label>
+          <p class="micro">Audio is processed locally in your browser. Nothing is uploaded. Actual formats depend on browser decoding support.</p>
+          <div class="audio-file-meta" id="audioFileMeta">WAITING FOR INPUT</div>
+          <audio id="audioPlayer" controls preload="metadata"></audio>
+          <button class="primary" id="analyzeAudio" type="button" disabled>RUN SIGNAL TESTS ↗</button>
+          <button class="secondary audio-reset" id="clearAudio" type="button" disabled>UNLOAD FILE</button>
+        </div>
+        <div class="card audio-results">
+          <div class="card-head"><h3>02 / Signal report</h3><span class="cue-count" id="analysisState">STANDBY</span></div>
+          <div class="wave-wrap"><canvas id="audioWave" aria-label="Audio waveform preview"></canvas><div class="wave-labels"><span>WAVEFORM / OVERVIEW</span><span id="waveDuration">--:--</span></div></div>
+          <div class="metric-grid" id="audioMetrics">
+            <div class="metric"><span>PEAK LEVEL</span><strong>—</strong><small>dBFS</small></div><div class="metric"><span>RMS LEVEL</span><strong>—</strong><small>dBFS</small></div><div class="metric"><span>CLIPPED SAMPLES</span><strong>—</strong><small>near 0 dBFS</small></div><div class="metric"><span>DC OFFSET</span><strong>—</strong><small>sample mean</small></div><div class="metric"><span>CHANNEL BALANCE</span><strong>—</strong><small>L / R RMS</small></div><div class="metric"><span>MONO CHECK</span><strong>—</strong><small>correlation estimate</small></div>
+          </div>
+          <div id="audioFindings" class="audio-findings" aria-live="polite">Load an audio file and run tests to generate a local signal report.</div>
+        </div>
+      </div>
+      <div class="card data-utilities"><div><p class="eyebrow">LOCAL DATA / MAINTENANCE</p><h3>Toolkit data</h3><p class="micro">Export or clear the event board, cue plan, and lineup archive. Audio files are never included in the export.</p></div><div class="readme-actions"><button class="secondary" id="exportAll">EXPORT ALL DATA</button><button class="secondary" id="resetData">CLEAR LOCAL DATA</button></div></div>
+    </section>
   </main>
   <footer><span>VR//SYS — COMMUNITY INFRASTRUCTURE</span><span>NO ACCOUNT · LOCAL-FIRST · EXPORTABLE</span></footer>
 </div>
@@ -107,7 +148,7 @@
   const $ = (s, root=document) => root.querySelector(s);
   const $$ = (s, root=document) => [...root.querySelectorAll(s)];
   const KEY = 'vrsys-toolkit-v1';
-  let state = { events: [], tracks: [] };
+  let state = { events: [], tracks: [], cues: [] };
   try { state = {...state, ...JSON.parse(localStorage.getItem(KEY) || '{}')}; } catch {}
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch {} };
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -138,10 +179,17 @@
       return `<article class="entry"><div><h4>${esc(t.title)} <span style="color:var(--pink)">/ ${esc(t.artist)}</span></h4><p>${[t.genre,t.year,t.event].filter(Boolean).map(esc).join(' · ') || 'NO ADDITIONAL METADATA'}${url ? `<br><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">LISTEN ↗</a>` : ''}</p></div><button class="delete" data-delete-track="${esc(t.id)}">REMOVE</button></article>`;
     }).join('');
   }
+  function renderCues() {
+    state.cues = state.cues || [];
+    $('#cueCount').textContent = `${String(state.cues.length).padStart(2,'0')} CUES`;
+    const root = $('#cueList');
+    if (!state.cues.length) { root.className='empty'; root.innerHTML='No cues scheduled yet.<br><span>Add transitions, lighting changes, host prompts, or technical checks.</span>'; return; }
+    root.className='cue-timeline';
+    root.innerHTML = state.cues.map(c => `<article class="cue-row"><div class="cue-time">${esc(c.time)}</div><div><span class="cue-kind">${esc(c.kind || 'OTHER')}</span><h4>${esc(c.title)}</h4><p>${c.operator ? 'OPERATOR: '+esc(c.operator)+'<br>' : ''}${esc(c.notes || 'NO EXECUTION NOTES')}</p></div><div class="cue-actions"><button class="delete" data-delete-cue="${esc(c.id)}">REMOVE</button></div></article>`).join('');
+  }
   $$('.tab').forEach(btn => btn.addEventListener('click', () => {
     $$('.tab').forEach(b => b.classList.toggle('active', b===btn));
     $$('.panel').forEach(p => p.classList.toggle('active', p.id===btn.dataset.panel));
-    if (btn.dataset.panel === 'visualizer') draw();
   }));
   $('#eventForm').addEventListener('submit', e => {
     e.preventDefault(); const f = new FormData(e.currentTarget); const d = Object.fromEntries(f.entries());
@@ -155,85 +203,82 @@
     state.tracks.push({...d, id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now())});
     save(); renderTracks(); e.currentTarget.reset();
   });
+  $('#cueForm').addEventListener('submit', e => {
+    e.preventDefault(); const f = new FormData(e.currentTarget); const d = Object.fromEntries(f.entries());
+    state.cues = state.cues || [];
+    state.cues.push({...d, id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now())});
+    save(); renderCues(); e.currentTarget.reset();
+  });
   document.addEventListener('click', e => {
-    const ev = e.target.closest('[data-delete-event]'), tr = e.target.closest('[data-delete-track]');
+    const ev = e.target.closest('[data-delete-event]'), tr = e.target.closest('[data-delete-track]'), cue = e.target.closest('[data-delete-cue]');
     if (ev && confirm('Remove this event from the local board?')) { state.events = state.events.filter(x => x.id !== ev.dataset.deleteEvent); save(); renderEvents(); }
     if (tr && confirm('Remove this archive entry?')) { state.tracks = state.tracks.filter(x => x.id !== tr.dataset.deleteTrack); save(); renderTracks(); }
+    if (cue && confirm('Remove this cue from the run of show?')) { state.cues = (state.cues || []).filter(x => x.id !== cue.dataset.deleteCue); save(); renderCues(); }
   });
   $('#exportEvents').addEventListener('click', () => download('virtual-rave-events.json', state.events));
   $('#exportTracks').addEventListener('click', () => download('virtual-rave-lineup-archive.json', state.tracks));
-  $('#exportAll').addEventListener('click', () => download('virtual-rave-systems-data.json', state));
-  $('#resetData').addEventListener('click', () => { if(confirm('Clear all saved events and archive entries from this browser? This cannot be undone unless you exported a backup.')) { state={events:[],tracks:[]}; save(); renderEvents(); renderTracks(); } });
-
-  const canvas = $('#viz'), ctx = canvas.getContext('2d'), audio = $('#audio');
-  const file = $('#audioFile'), play = $('#playAudio'), pause = $('#pauseAudio');
-  let audioCtx, analyser, source, dataArray, raf=0, phase=0, loaded=false;
-  const palettes = {
-    magenta:['#ff315a','#ff4fb8','#a65dff','#5d2cff'],
-    red:['#ff173d','#ff4d4d','#a30028','#ff8a5b'],
-    ice:['#5de8ff','#729dff','#d4fbff','#3c55ff'],
-    acid:['#b4ff54','#57ffb0','#efff75','#29a87c']
-  };
-  function sizeCanvas() {
-    const rect=canvas.getBoundingClientRect(), dpr=Math.min(window.devicePixelRatio||1,2);
-    canvas.width=Math.max(1,Math.floor(rect.width*dpr)); canvas.height=Math.max(1,Math.floor(rect.height*dpr));
-    ctx.setTransform(dpr,0,0,dpr,0,0);
+  $('#exportCues').addEventListener('click', () => download('virtual-rave-show-cues.json', state.cues || []));
+  $('#sortCues').addEventListener('click', () => { state.cues = (state.cues || []).slice().sort((a,b) => { const parse = v => { const m = String(v).match(/^(?:(\d+):)?(\d+)(?::(\d+))?$/); return m ? Number(m[1]||0)*3600 + Number(m[2]||0)*60 + Number(m[3]||0) : Number.MAX_SAFE_INTEGER; }; return parse(a.time)-parse(b.time); }); save(); renderCues(); });
+  // Local audio diagnostics: file bytes never leave this page.
+  const audioInput = $('#audioFile'), audioPlayer = $('#audioPlayer'), analyzeBtn = $('#analyzeAudio'), clearAudioBtn = $('#clearAudio');
+  let audioObjectUrl = null, decodedAudio = null;
+  const fmtTime = sec => { if(!Number.isFinite(sec)) return '--:--'; const m=Math.floor(sec/60), s=Math.floor(sec%60); return `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`; };
+  const dbfs = n => n <= 0 ? '-∞' : (20*Math.log10(n)).toFixed(2);
+  function drawWave(buffer){
+    const canvas=$('#audioWave'), rect=canvas.getBoundingClientRect(), dpr=window.devicePixelRatio||1;
+    const w=Math.max(300,Math.floor(rect.width||600)), h=150; canvas.width=w*dpr; canvas.height=h*dpr;
+    const ctx=canvas.getContext('2d');ctx.scale(dpr,dpr);ctx.fillStyle='#070710';ctx.fillRect(0,0,w,h);
+    ctx.strokeStyle='#292641';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(0,h/2);ctx.lineTo(w,h/2);ctx.stroke();
+    const data=buffer.getChannelData(0), step=Math.max(1,Math.floor(data.length/w));
+    ctx.strokeStyle='#48f5ff';ctx.shadowColor='#48f5ff';ctx.shadowBlur=5;ctx.lineWidth=1;ctx.beginPath();
+    for(let x=0;x<w;x++){let lo=1,hi=-1;const from=x*step,to=Math.min(data.length,from+step);for(let j=from;j<to;j++){if(data[j]<lo)lo=data[j];if(data[j]>hi)hi=data[j]}ctx.moveTo(x,(1-hi)*h/2);ctx.lineTo(x,(1-lo)*h/2)}ctx.stroke();ctx.shadowBlur=0;
+    $('#waveDuration').textContent=fmtTime(buffer.duration);
   }
-  function draw() {
-    cancelAnimationFrame(raf);
-    const w=canvas.clientWidth||640,h=canvas.clientHeight||360;
-    if(!canvas.width || !canvas.height) sizeCanvas();
-    const intensity=Number($('#intensity').value), colors=palettes[$('#palette').value]||palettes.magenta;
-    ctx.fillStyle='rgba(5,4,9,0.22)';ctx.fillRect(0,0,w,h);
-    let average=0;
-    if(analyser && dataArray && !audio.paused) { analyser.getByteFrequencyData(dataArray); average=dataArray.reduce((a,b)=>a+b,0)/dataArray.length/255; }
-    phase += 0.006 + average*0.06;
-    const cx=w/2, cy=h/2, rings=8+intensity;
-    ctx.globalCompositeOperation='lighter';
-    for(let r=0;r<rings;r++){
-      const base=(Math.min(w,h)*0.06)+(r*5.8)+(average*intensity*18);
-      ctx.beginPath();
-      const points=160;
-      for(let i=0;i<=points;i++){
-        const a=i/points*Math.PI*2;
-        const band=dataArray ? dataArray[Math.min(dataArray.length-1,Math.floor(i/points*dataArray.length))]/255 : 0;
-        const wave=Math.sin(a*(3+(r%5))+phase*(r%2?1:-1))*((2+band*intensity*12));
-        const radius=base+wave;
-        const x=cx+Math.cos(a+phase*(r%3)*.12)*radius*1.45;
-        const y=cy+Math.sin(a+phase*(r%4)*.08)*radius*.8;
-        if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);
-      }
-      ctx.closePath();ctx.strokeStyle=colors[r%colors.length];ctx.globalAlpha=.18+(r/rings)*.55+average*.25;ctx.lineWidth=.6+(r%3)*.35;ctx.stroke();
-    }
-    ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';
-    if(!loaded) {
-      ctx.fillStyle='rgba(240,234,245,.45)';ctx.font='10px monospace';ctx.textAlign='center';
-      ctx.fillText('LOAD AUDIO TO DRIVE THE FIELD',cx,h-24);
-    }
-    raf=requestAnimationFrame(draw);
-  }
-  file.addEventListener('change', () => {
-    const f=file.files && file.files[0]; if(!f)return;
-    audio.src=URL.createObjectURL(f); audio.load(); loaded=true; play.disabled=false;pause.disabled=false;
-    $('#vizState').textContent='AUDIO LOADED / READY'; draw();
+  function metricMarkup(label,value,unit){return `<div class="metric"><span>${label}</span><strong>${value}</strong><small>${unit}</small></div>`}
+  audioInput.addEventListener('change',()=>{
+    const file=audioInput.files&&audioInput.files[0];if(!file)return;
+    if(audioObjectUrl)URL.revokeObjectURL(audioObjectUrl);audioObjectUrl=URL.createObjectURL(file);decodedAudio=null;
+    audioPlayer.src=audioObjectUrl;$('#audioStatus').textContent='FILE READY';$('#analysisState').textContent='NOT TESTED';
+    $('#audioFileMeta').textContent=`${file.name}\n${(file.size/1048576).toFixed(2)} MB · ${file.type||'TYPE NOT REPORTED'}`;
+    $('#audioFindings').textContent='Ready to decode. Select RUN SIGNAL TESTS to inspect levels, clipping, channel balance, and mono compatibility.';
+    $('#audioMetrics').innerHTML=[metricMarkup('PEAK LEVEL','—','dBFS'),metricMarkup('RMS LEVEL','—','dBFS'),metricMarkup('CLIPPED SAMPLES','—','near 0 dBFS'),metricMarkup('DC OFFSET','—','sample mean'),metricMarkup('CHANNEL BALANCE','—','L / R RMS'),metricMarkup('MONO CHECK','—','correlation estimate')].join('');
+    const c=$('#audioWave').getContext('2d');c.clearRect(0,0,$('#audioWave').width,$('#audioWave').height);analyzeBtn.disabled=false;clearAudioBtn.disabled=false;
   });
-  async function setupAudio() {
-    if(!audioCtx) {
-      audioCtx=new (window.AudioContext||window.webkitAudioContext)();
-      analyser=audioCtx.createAnalyser();analyser.fftSize=512;dataArray=new Uint8Array(analyser.frequencyBinCount);
-      source=audioCtx.createMediaElementSource(audio);source.connect(analyser);analyser.connect(audioCtx.destination);
-    }
-    if(audioCtx.state==='suspended')await audioCtx.resume();
-  }
-  play.addEventListener('click', async()=>{if(!audio.src)return;try{await setupAudio();await audio.play();$('#vizState').textContent='LIVE / AUDIO ANALYSIS';draw();}catch(err){$('#vizState').textContent='AUDIO PLAYBACK UNAVAILABLE';}});
-  pause.addEventListener('click',()=>audio.pause());
-  audio.addEventListener('pause',()=>{if(loaded)$('#vizState').textContent='PAUSED / FIELD IDLE';});
-  audio.addEventListener('ended',()=>$('#vizState').textContent='PLAYBACK COMPLETE');
-  $('#palette').addEventListener('change',draw);$('#intensity').addEventListener('input',draw);
-  window.addEventListener('resize',()=>{sizeCanvas();draw();});
+  analyzeBtn.addEventListener('click',async()=>{
+    const file=audioInput.files&&audioInput.files[0];if(!file)return;
+    analyzeBtn.disabled=true;$('#analysisState').textContent='DECODING…';$('#audioFindings').textContent='Decoding audio locally…';
+    let context;
+    try{
+      const bytes=await file.arrayBuffer();context=new (window.AudioContext||window.webkitAudioContext)();
+      decodedAudio=await context.decodeAudioData(bytes.slice(0));const b=decodedAudio, channels=b.numberOfChannels;
+      let peak=0,sumSq=0,sum=0,count=0,clipped=0;const channelRms=[];
+      for(let ch=0;ch<channels;ch++){const d=b.getChannelData(ch);let ss=0;for(let i=0;i<d.length;i++){const v=d[i];peak=Math.max(peak,Math.abs(v));ss+=v*v;if(ch===0){sum+=v;sumSq+=v*v;count++;if(Math.abs(v)>=0.999)clipped++;}}channelRms.push(Math.sqrt(ss/d.length));}
+      const rms=Math.sqrt(sumSq/count),dc=sum/count;
+      let corr=null;if(channels>=2){const l=b.getChannelData(0),r=b.getChannelData(1);let dot=0,ll=0,rr=0;const stride=Math.max(1,Math.floor(l.length/100000));for(let i=0;i<l.length;i+=stride){dot+=l[i]*r[i];ll+=l[i]*l[i];rr+=r[i]*r[i]}corr=(ll&&rr)?dot/Math.sqrt(ll*rr):0;}
+      const balance=channels>=2?20*Math.log10((channelRms[0]+1e-12)/(channelRms[1]+1e-12)):null;
+      const metrics=[metricMarkup('PEAK LEVEL',dbfs(peak),'dBFS · sample peak'),metricMarkup('RMS LEVEL',dbfs(rms),'dBFS · channel 1'),metricMarkup('CLIPPED SAMPLES',clipped.toLocaleString(),'samples ≥ −0.01 dBFS'),metricMarkup('DC OFFSET',dc.toFixed(5),'sample mean'),metricMarkup('CHANNEL BALANCE',balance===null?'MONO':`${balance>0?'+':''}${balance.toFixed(2)} dB`,'L/R RMS difference'),metricMarkup('MONO CHECK',corr===null?'MONO':corr.toFixed(3),'L/R correlation')];
+      $('#audioMetrics').innerHTML=metrics.join('');drawWave(b);$('#audioStatus').textContent='ANALYSIS COMPLETE';$('#analysisState').textContent='REPORT READY';
+      const findings=[];findings.push(`FILE: ${b.numberOfChannels} channel(s) · ${b.sampleRate.toLocaleString()} Hz · ${fmtTime(b.duration)} · ${b.length.toLocaleString()} frames`);
+      findings.push(peak>=0.999?'⚠ Peak samples are at or near full scale. Check for clipping and leave headroom.':'✓ Sample peak is below the near-full-scale threshold.');
+      findings.push(clipped?`⚠ ${clipped.toLocaleString()} samples in channel 1 reach ≥ −0.01 dBFS; this is a clipping-risk indicator, not proof of audible distortion.`:'✓ No near-full-scale samples detected in channel 1.');
+      findings.push(Math.abs(dc)>0.01?'⚠ Noticeable DC offset in channel 1; inspect before mastering.':'✓ DC offset is small in channel 1.');
+      if(balance!==null)findings.push(Math.abs(balance)>3?`⚠ L/R RMS differs by ${balance.toFixed(2)} dB. Confirm this is intentional.`:`✓ L/R RMS difference is ${balance.toFixed(2)} dB.`);
+      if(corr!==null)findings.push(corr<0?'⚠ Negative L/R correlation: check mono fold-down for cancellation.':corr<0.2?'⚠ Low L/R correlation; audition mono compatibility.':'✓ L/R correlation does not show strong anti-phase behavior.');
+      findings.push(`FORMAT: ${file.type||'browser-reported type unavailable'} · ${ (file.size/1048576).toFixed(2)} MB. Loudness LUFS, true peak, and codec-specific checks are not measured by this basic browser tester.`);
+      $('#audioFindings').textContent=findings.join('\n');
+      await context.close();
+    }catch(err){$('#analysisState').textContent='DECODE FAILED';$('#audioStatus').textContent='UNSUPPORTED FILE';$('#audioFindings').textContent='The browser could not decode this file. Try a WAV or MP3 file supported by your browser. Details: '+(err&&err.message?err.message:'unknown decoding error');}
+    finally{analyzeBtn.disabled=false;}
+  });
+  clearAudioBtn.addEventListener('click',()=>{audioPlayer.pause();audioPlayer.removeAttribute('src');audioPlayer.load();if(audioObjectUrl)URL.revokeObjectURL(audioObjectUrl);audioObjectUrl=null;decodedAudio=null;audioInput.value='';analyzeBtn.disabled=true;clearAudioBtn.disabled=true;$('#audioStatus').textContent='NO FILE LOADED';$('#analysisState').textContent='STANDBY';$('#audioFileMeta').textContent='WAITING FOR INPUT';$('#waveDuration').textContent='--:--';$('#audioFindings').textContent='Load an audio file and run tests to generate a local signal report.';$('#audioMetrics').innerHTML=[metricMarkup('PEAK LEVEL','—','dBFS'),metricMarkup('RMS LEVEL','—','dBFS'),metricMarkup('CLIPPED SAMPLES','—','near 0 dBFS'),metricMarkup('DC OFFSET','—','sample mean'),metricMarkup('CHANNEL BALANCE','—','L / R RMS'),metricMarkup('MONO CHECK','—','correlation estimate')].join('');const c=$('#audioWave'),ctx=c.getContext('2d');ctx.clearRect(0,0,c.width,c.height);});
+  window.addEventListener('resize',()=>{if(decodedAudio)drawWave(decodedAudio)});
+    $('#exportAll').addEventListener('click', () => download('virtual-rave-systems-data.json', state));
+  $('#resetData').addEventListener('click', () => { if(confirm('Clear all saved events, cues, and archive entries from this browser? This cannot be undone unless you exported a backup.')) { state={events:[],tracks:[],cues:[]}; save(); renderEvents(); renderTracks(); renderCues(); } });
+
   function tick(){const d=new Date();$('#clock').textContent=[d.getHours(),d.getMinutes(),d.getSeconds()].map(n=>String(n).padStart(2,'0')).join(':');}
-  tick();setInterval(tick,1000);sizeCanvas();ctx.fillStyle='#050409';ctx.fillRect(0,0,canvas.width,canvas.height);renderEvents();renderTracks();
+  tick();setInterval(tick,1000);renderEvents();renderTracks();renderCues();
 })();
 </script>
 </body>
 </html>
+
